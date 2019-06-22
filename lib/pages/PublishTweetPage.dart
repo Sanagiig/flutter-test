@@ -64,7 +64,7 @@ class _PublishTweetPageState extends State<PublishTweetPage> {
       ));
       return;
     }
-    showModalBottomSheet<void>(context: context, builder: _bottomSheetBuilder);
+    showModalBottomSheet<void>(context: ctx, builder: _bottomSheetBuilder);
   }
 
   Widget getBody() {
