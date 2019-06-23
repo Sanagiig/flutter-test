@@ -11,12 +11,14 @@ class HomePage extends StatefulWidget {
     Text('home'),
     Text('email'),
     Text('settings'),
+    Text('settings'),
   ];
 
   final List<IconData> iconList = const [
     Icons.home,
     Icons.email,
-    Icons.settings
+    Icons.settings,
+    Icons.access_alarm
   ];
 
   final List<Widget> _panelList = const [
@@ -44,10 +46,23 @@ class _HomePageState extends State<HomePage> {
     return Container(
       child: Scaffold(
           appBar: AppBar(title: Text('Navigation ...')),
-          bottomNavigationBar: BottomNavigator(
-            titleList: widget.titleList,
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {},
+            tooltip: 'Increment',
+            child: Icon(
+              Icons.add,
+              color: Colors.white,
+            ),
+          ),
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerDocked,
+          // bottomNavigationBar: BottomNavigator(
+          //   titleList: widget.titleList,
+          //   iconList: widget.iconList,
+          //   indexChange: indexChange,
+          // ),
+          bottomNavigationBar: MyBottomAppBar(
             iconList: widget.iconList,
-            indexChange: indexChange,
           ),
           body: panel),
     );

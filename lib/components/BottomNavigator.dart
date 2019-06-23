@@ -42,10 +42,45 @@ class _BottomNavigatorState extends State<BottomNavigator> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
       items: widget.getItemList(),
       currentIndex: _curIndex,
       onTap: _indexChange,
       fixedColor: Colors.blue,
+    );
+  }
+}
+
+class MyBottomAppBar extends StatefulWidget {
+  final List<IconData> iconList;
+
+  MyBottomAppBar({Key key, this.iconList}) : super(key: key);
+
+  List getItemList() {
+    List<Widget> items = [];
+    for (int i = 0; i < iconList.length; i++) {
+      items.add(IconButton(
+          icon: Icon(iconList[i]), color: Colors.white, onPressed: () {}));
+    }
+    return items;
+  }
+
+  _MyBottomAppBarState createState() => _MyBottomAppBarState();
+}
+
+class _MyBottomAppBarState extends State<MyBottomAppBar> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: BottomAppBar(
+        color: Colors.lightBlue,
+        shape: CircularNotchedRectangle(),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: widget.getItemList(),
+        ),
+      ),
     );
   }
 }

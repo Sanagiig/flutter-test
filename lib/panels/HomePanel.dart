@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../components/common.dart';
 import '../pages/Page1.dart';
 import '../pages/ListPage.dart';
+import '../pages/RouterAnimationPage1.dart';
 
 class HomePanel extends StatelessWidget {
   const HomePanel({Key key}) : super(key: key);
@@ -14,6 +15,7 @@ class HomePanel extends StatelessWidget {
         children: <Widget>[
           LinkBtn(text: 'link1', page: Page1()),
           LinkBtn(text: 'product list', page: ProductList()),
+          LinkBtn(text: 'router animation', page: RouterAnimationPage1()),
         ],
       ),
     ));
