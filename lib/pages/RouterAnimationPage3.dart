@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './RouterAnimationPage4.dart';
+import '../components/AnimationRoute.dart';
+
 class RouterAnimationPage3 extends StatelessWidget {
   const RouterAnimationPage3({Key key}) : super(key: key);
 
@@ -16,9 +18,8 @@ class RouterAnimationPage3 extends StatelessWidget {
         GestureDetector(
           child: Icon(Icons.arrow_right, color: Colors.white, size: 50),
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(builder:(context) {
-              return RouterAnimationPage4();
-            }));
+            Navigator.of(context)
+                .push(RotateScaleRoute(RouterAnimationPage4()));
           },
         )
       ]),

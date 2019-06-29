@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './RouterAnimationPage1.dart';
+import '../components/AnimationRoute.dart';
 import './HomePage.dart';
 
 class RouterAnimationPage4 extends StatelessWidget {
@@ -18,17 +19,13 @@ class RouterAnimationPage4 extends StatelessWidget {
         GestureDetector(
           child: Icon(Icons.arrow_right, color: Colors.white, size: 50),
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(builder:(context) {
-              return RouterAnimationPage1();
-            }));
+            Navigator.of(context).push(SlideRoute(RouterAnimationPage1()));
           },
         ),
         GestureDetector(
           child: Icon(Icons.home, color: Colors.white, size: 50),
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(builder:(context) {
-              return HomePage();
-            }));
+            Navigator.of(context).push(SlideRoute(HomePage()));
           },
         )
       ]),
