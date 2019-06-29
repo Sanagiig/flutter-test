@@ -9,6 +9,8 @@ import '../pages/SearchBarPage.dart';
 import '../pages/WrapLayoutPage.dart';
 import '../pages/ExpansionPage.dart';
 import '../pages/CurvePage.dart';
+import '../pages/ToolTipPage.dart';
+import '../pages/DragPage.dart';
 
 class HomePanel extends StatelessWidget {
   const HomePanel({Key key}) : super(key: key);
@@ -29,6 +31,8 @@ class HomePanel extends StatelessWidget {
           LinkBtn(text: 'wrap layout ...', page: WrapLayoutPage()),
           LinkBtn(text: 'expansion ...', page: ExpansionPage()),
           LinkBtn(text: 'curve ...', page: CurvePage()),
+          LinkBtn(text: 'tool tip ...', page: ToolTipPage()),
+          LinkBtn(text: 'DragPage ...', page: DragPage()),
         ],
       ),
     ));
